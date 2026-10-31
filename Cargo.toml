@@ -1,0 +1,27 @@
+[package]
+name = "phi-ns-browser"
+version = "0.1.0"
+edition = "2024"
+description = "Browser capability pack (b.*): CDP session, DOM query, screenshots as ImageRef"
+license = "MIT"
+repository = "https://github.com/hibuka-labs/phi-ns-browser"
+readme = "README.md"
+keywords = ["agent", "capability", "codeact"]
+categories = ["development-tools"]
+
+# Assembly (`.with_ns`) happens above this crate; the pack only speaks the
+# phi-ns contract — never codexec (sdk-assembly §9.3).
+[dependencies]
+phi-ns = { version = "0.1.0", default-features = false }
+phi-cap = { version = "0.1.0" }
+headless_chrome = "1.0"
+html2md = "0.2"
+async-trait = "0.1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt", "sync"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+tempfile = "3"
+tiktoken-rs = "0.12"
