@@ -21,4 +21,4 @@ phi-ns-browser = "0.1.0"
 
 ## License
 
-MIT.
+MIT OR Apache-2.0 — see [LICENSE-MIT](LICENSE-MIT) and [LICENSE-APACHE](LICENSE-APACHE).
